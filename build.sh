@@ -2,9 +2,12 @@
 
 cd asm
 clang -c *.s -O3
-cd ..
 
-ar rcs asm/build/libneon.a asm/*.o
+mkdir build
+cd build
+ar rcs libneon.a ../*.o
+
+cd ../..
 
 rm asm/*.o
 
