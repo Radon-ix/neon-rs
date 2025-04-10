@@ -1,6 +1,9 @@
 #! /bin/bash
 
-clang -c asm/*.s -O3
+cd asm
+clang -c *.s -O3
+cd ..
+
 ar rcs asm/build/libneon.a asm/*.o
 
 rm asm/*.o
