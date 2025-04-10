@@ -1,1 +1,1 @@
-pub mod vec_types;
+pub mod types;
