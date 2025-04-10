@@ -3,7 +3,7 @@
 cd asm
 clang -c *.s -O3
 
-mkdir build
+mkdir -p build
 cd build
 ar rcs libneon.a ../*.o
 
