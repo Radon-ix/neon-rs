@@ -1,3 +1,6 @@
+#[cfg(test)]
+mod test;
+
 use std::ops::Add;
 
 use crate::{ffi::{_add_vecu8_16, _add_vecu8_8}, types::{VecU8_16, VecU8_8}};
