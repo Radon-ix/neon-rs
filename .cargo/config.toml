@@ -1,2 +1,2 @@
 [target.aarch64-unknown-linux-gnu]
-rustflags = ["-Lasm/build", "-lneon"]
+rustflags = ["-Lasm/build", "-lstatic=neon"]
