@@ -3,5 +3,6 @@ name = "neon-rs"
 version = "0.1.0"
 edition = "2024"
 links = "neon"
+build = "build.rs" 
 
 [dependencies]
