@@ -4,12 +4,12 @@ cd asm
 clang -c *.s -O3
 
 mkdir -p build
-cd build
-ar rcs libneon.a ../*.o
+ar rcs libneon.a *.o
+mv libneon.a build/libneon.a
 
-cd ../..
+rm *.o
 
-rm asm/*.o
+cd ..
 
 cp asm/build/libneon.a target/aarch64-unknown-linux-gnu/release/libneon.a
 cp asm/build/libneon.a target/aarch64-unknown-linux-gnu/debug/libneon.a
