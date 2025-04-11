@@ -1,3 +1,2 @@
-[target.aarch64-unknown-linux-gnu.neon]
-rustc-link-search = ["asm/build"]
-rustc-link-lib = ["static=neon"]
+[target.aarch64-unknown-linux-gnu]
+rustflags = ["-Lasm/build", "-lneon"]

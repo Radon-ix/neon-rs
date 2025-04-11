@@ -9,6 +9,7 @@
 
     add v2.16b, v0.16b, v1.16b
     str q2, [x2]
+    ret
 
 
 .global _add_vecu8_8
@@ -20,3 +21,4 @@
 
     add v2.8b, v0.8b, v1.8b
     str d2, [x2]
+    ret
