@@ -3,7 +3,7 @@
 .global _add_vecu8_16
 .type _add_vecu8_16, %function
 
-._add_vecu8_16:
+_add_vecu8_16:
     ldr q0, [x0]
     ldr q1, [x1]
 
@@ -15,7 +15,7 @@
 .global _add_vecu8_8
 .type _add_vecu8_8, %function
 
-._add_vecu8_8:
+_add_vecu8_8:
     ldr d0, [x0]
     ldr d1, [x1]
 
