@@ -1,24 +1,48 @@
 .text
 
-.global _add_vecu8_16
-.type _add_vecu8_16, %function
+.global _w_add_vecu8_16
+.type _w_add_vecu8_16, %function
 
-_add_vecu8_16:
-    ldr q0, [x0]
-    ldr q1, [x1]
+_w_add_vecu8_16:
+    ld1 {v0.16b}, [x0]
+    ld1 {v1.16b}, [x1]
 
     add v2.16b, v0.16b, v1.16b
-    str q2, [x2]
+    st1 {v2.16b}, [x2]
     ret
 
 
-.global _add_vecu8_8
-.type _add_vecu8_8, %function
+.global _w_add_vecu8_8
+.type _w_add_vecu8_8, %function
 
-_add_vecu8_8:
-    ldr d0, [x0]
-    ldr d1, [x1]
+_w_add_vecu8_8:
+    ld1 {v0.8b}, [x0]
+    ld1 {v1.8b}, [x1]
 
     add v2.8b, v0.8b, v1.8b
-    str d2, [x2]
+    st1 {v2.8b}, [x2]
+    ret
+
+
+.global _w_sub_vecu8_16
+.type _w_sub_vecu8_16, %function
+
+_w_sub_vecu8_16:
+    ld1 {v0.16b}, [x0]
+    ld1 {v1.16b}, [x1]
+
+    sub v2.16b, v0.16b, v1.16b
+    st1 {v2.16b}, [x2]
+    ret
+
+
+.global _w_sub_vecu8_8
+.type _w_sub_vecu8_8, %function
+
+_w_sub_vecu8_8:
+    ld1 {v0.8b}, [x0]
+    ld1 {v1.8b}, [x1]
+
+    sub v2.8b, v0.8b, v1.8b
+    st1 {v2.8b}, [x2]
     ret

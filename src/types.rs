@@ -3,9 +3,21 @@ pub struct VecU8_16 {
     pub data: [u8; 16]
 }
 
+impl VecU8_16 {
+    pub fn zero() -> Self {
+        Self { data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }
+    }
+}
+
 #[derive(Clone, Copy)]
 pub struct VecU8_8 {
     pub data: [u8; 8]
+}
+
+impl VecU8_8 {
+    pub fn zero() -> Self {
+        Self { data: [0, 0, 0, 0, 0, 0, 0, 0] }
+    }
 }
 
 #[derive(Clone, Copy)]
